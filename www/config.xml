@@ -3,7 +3,8 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.phonegap.wasgehtwann"
+		xmlns:android   = "http://schemas.android.com/apk/res/android"
+        id        = "de.wasgehtwann.app"
         version   = "1.0.0">
 
     <name>wasgehtwann.de</name>
@@ -16,6 +17,14 @@
         Lukas Hansen
     </author>
 	
+	
+	    <!-- Plugins -->
+
+	  <plugin name="https://github.com/apache/cordova-plugin-splashscreen" />
+	  <plugin name="https://github.com/apache/cordova-plugin-inappbrowser" />
+	  <plugin name="https://github.com/dpa99c/cordova-custom-config" />
+
+
 
     <!--
         If you do not want any permissions to be added to your app, add the
@@ -44,23 +53,13 @@
 	<preference name="FadeSplashScreen" value="true" />
     <preference name="disable-cursor"             value="auto" />          <!-- blackberry: prevents a mouse-icon/cursor from being displayed on the app -->
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
-    <!--
+	<preference name="android-manifest/application/activity/@android:theme" value="@android:style/Theme.Material" />   
+   <!--
         Define a specific version of PhoneGap to build into your app.
         <preference name="phonegap-version"       value="3.5.0" />
     -->
 
-    <!-- Plugins -->
 
-    <!-- Core plugins -->
-   
-	  <!--  <plugin name="cordova-plugin-inappbrowser" />-->
-	  
-	 <!--  <plugin name="cordova-plugin-splashscreen" />-->
-	  <plugin name="https://github.com/apache/cordova-plugin-splashscreen" />
-	  <plugin name="https://github.com/apache/cordova-plugin-inappbrowser" />
-
-
-    <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
     <!--
         <plugin name="com.phonegap.plugins.barcodescanner" />
